@@ -16,7 +16,6 @@ namespace AssemblyLoader
                 Assembly assembly = Assembly.LoadFrom(extensionPath + "Test1.dll");
                 DisplayAssembly(assembly);
                 CreateInstance(assembly);
-
             }
             catch
             {
@@ -26,7 +25,6 @@ namespace AssemblyLoader
 
             static void DisplayAssembly(Assembly a)
             {
-
                 Console.WriteLine("Assembly Info");
                 Console.WriteLine("============================================");
                 Console.WriteLine("Name:{0}", a.GetName().Name);
@@ -46,10 +44,8 @@ namespace AssemblyLoader
 
                     //Get public property “newNumber” info and value, and then set it to 9.
                     obj.newNumber = 9;
-
                     Console.WriteLine("newNumber Value is {0}", obj.newNumber);
                 }
-
                 catch
                 {
                     Console.WriteLine("Can't Create Assembly Instance");
